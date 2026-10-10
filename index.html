@@ -67,7 +67,7 @@
           </li>
           <li>
             <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-            Desde 26 € al mes, sin contrato ni permanencia.
+            Desde <span data-precio-desde>26</span> € al mes, sin contrato ni permanencia.
           </li>
           <li>
             <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
@@ -436,7 +436,7 @@
     <div class="card" style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;padding:28px">
       <div style="flex:1;min-width:260px">
         <h2 style="margin-bottom:8px">Empieza por una obra</h2>
-        <p class="muted" style="margin:0">Abre una obra de verdad, mete un parte y decides si te sirve. Desde 26 € al mes, sin permanencia.</p>
+        <p class="muted" style="margin:0">Abre una obra de verdad, mete un parte y decides si te sirve. Desde <span data-precio-desde>26</span> € al mes, sin permanencia.</p>
       </div>
       <div class="btn-row" style="margin:0">
         <a class="btn btn-primary btn-lg" href="https://bitacobra-suite.lovable.app">Entrar en la app</a>
@@ -484,5 +484,8 @@
   </div>
 </footer>
 
+<!-- La promocion del propietario: si hay una encendida, cambia el "Desde 26 €" por el precio
+     rebajado y dice los meses y el precio normal. Si no hay promocion, no hace nada. -->
+<script src="promo.js" defer></script>
 </body>
 </html>

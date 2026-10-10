@@ -734,3 +734,47 @@ details p {
     transition: none !important;
   }
 }
+
+/* ============================================================================
+ *  La promocion (lo pinta promo.js con lo que el propietario tenga puesto en el panel)
+ * ============================================================================
+ *  Si no hay promocion encendida, promo.js no pinta nada y estas clases no se usan.
+ */
+#promo {
+  margin: 0 0 24px;
+}
+.promo-cartel {
+  border: 1px solid var(--primary);
+  background: var(--primary-soft);
+  border-radius: 14px;
+  padding: 16px 18px;
+}
+.promo-tag {
+  margin: 0;
+  color: var(--primary);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.promo-sub {
+  margin: 6px 0 0;
+  font-weight: 600;
+}
+.promo-nota,
+.promo-line {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+.promo-nota {
+  margin: 8px 0 0;
+}
+.promo-line {
+  margin: 6px 0 0;
+}
+.promo-line s {
+  opacity: 0.85;
+}
+[data-precio-desde] {
+  font-weight: 700;
+}

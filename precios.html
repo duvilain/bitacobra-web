@@ -43,6 +43,9 @@
 <!-- =============================================================== PLANES -->
 <section class="tight">
   <div class="wrap">
+    <!-- El cartel de la promocion: lo rellena promo.js con lo que haya puesto el propietario
+         en el panel. Si no hay promocion encendida, se queda oculto. -->
+    <div id="promo" hidden></div>
     <div class="plans">
       <div class="plan">
         <h3>Autónomo</h3>
@@ -233,5 +236,8 @@
   </div>
 </footer>
 
+<!-- La promocion del propietario: lee el descuento de la base y lo pinta (precio rebajado, precio
+     normal y los meses). Si no hay promocion, no hace nada. -->
+<script src="promo.js" defer></script>
 </body>
 </html>
