@@ -602,6 +602,20 @@ details p {
   font-size: 0.9rem;
 }
 
+/* ------------------------------------------------- aviso del formulario de contacto */
+
+.aviso-form {
+  margin: 14px 0 0;
+  font-size: 0.96rem;
+  min-height: 1.3em;
+}
+.aviso-form.ok {
+  color: var(--ok); /* verde: 6,3:1 sobre la tarjeta */
+}
+.aviso-form.error {
+  color: #fca5a5; /* rojo claro: 8,4:1 sobre la tarjeta */
+}
+
 /* ---------------------------------------------------------------- páginas legales */
 
 .legal {
