@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300" role="img" aria-label="BitacObra">
+  <!-- Logotipo completo, dibujado a mano: el icono y el nombre. «Bitac» en gris
+       industrial (el programa) y «Obra» en naranja de obra (la acción). -->
+  <g transform="translate(24 34) scale(0.45)">
+    <rect width="512" height="512" rx="116" fill="#0f1720"/>
+    <path d="M92 272 L256 126 L420 272"
+          fill="none" stroke="#f97316" stroke-width="42"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="154" y="272" width="204" height="172" rx="28" fill="#e9eef6"/>
+    <g stroke="#0f1720" stroke-width="22" stroke-linecap="round">
+      <line x1="200" y1="322" x2="312" y2="322"/>
+      <line x1="200" y1="366" x2="312" y2="366"/>
+      <line x1="200" y1="410" x2="270" y2="410"/>
+    </g>
+    <path d="M322 336 L356 372 L424 292"
+          fill="none" stroke="#22c55e" stroke-width="36"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="290" y="196"
+        font-family="ui-sans-serif, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+        font-weight="800" font-size="118" letter-spacing="-2">
+    <tspan fill="#8f9aa8">Bitac</tspan><tspan fill="#f97316">Obra</tspan>
+  </text>
+</svg>

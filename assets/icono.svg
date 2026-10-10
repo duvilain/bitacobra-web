@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="BitacObra">
+  <!-- El icono de BitacObra, dibujado a mano: un cuaderno de obra bajo el tejado de
+       una casa. El cuaderno es el parte de trabajo, el tejado la obra, y el visto
+       verde el trabajo dado por bueno. Gris industrial detrás, naranja de obra
+       delante: software + acción. -->
+  <rect width="512" height="512" rx="116" fill="#0f1720"/>
+
+  <path d="M92 272 L256 126 L420 272"
+        fill="none" stroke="#f97316" stroke-width="42"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="154" y="272" width="204" height="172" rx="28" fill="#e9eef6"/>
+
+  <g stroke="#0f1720" stroke-width="22" stroke-linecap="round">
+    <line x1="200" y1="322" x2="312" y2="322"/>
+    <line x1="200" y1="366" x2="312" y2="366"/>
+    <line x1="200" y1="410" x2="270" y2="410"/>
+  </g>
+
+  <path d="M322 336 L356 372 L424 292"
+        fill="none" stroke="#22c55e" stroke-width="36"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

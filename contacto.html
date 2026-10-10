@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto · BitacObra</title>
+<meta name="description" content="Escríbenos a hola@bitacobra.es para darte de alta, pedir una prueba o resolver cualquier duda sobre BitacObra.">
+<meta name="theme-color" content="#1b1e24">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://bitacobra.es/contacto.html">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="index.html">
+        <img src="assets/icono.svg" alt="" aria-hidden="true">
+        <span class="name"><span class="bitac">Bitac</span><span class="obra">Obra</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Principal">
+        <a href="index.html#que-hace">Qué hace</a>
+        <a href="precios.html">Precios</a>
+        <a href="index.html#preguntas">Preguntas</a>
+        <a href="contacto.html" aria-current="page">Contacto</a>
+        <a class="btn btn-primary" href="https://bitacobra-suite.lovable.app">Entrar en la app</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+
+<section class="hero tight">
+  <div class="wrap">
+    <h1>Escríbenos</h1>
+    <p class="lead">Para darte de alta, pedir una prueba o resolver cualquier duda. Contesta una persona, no un robot.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid grid-2">
+      <div>
+        <div class="card">
+          <h3>Correo</h3>
+          <p class="muted">La vía más directa. Cuéntanos qué haces y qué te quita más tiempo, y te decimos por dónde empezar.</p>
+          <p style="margin-bottom:0">
+            <a class="btn btn-primary" href="mailto:hola@bitacobra.es">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              hola@bitacobra.es
+            </a>
+          </p>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h3>Si tu empresa ya usa BitacObra</h3>
+          <p class="muted" style="margin-bottom:12px">Entra con tu usuario y contraseña. El alta la abre quien lleva la cuenta de la empresa y te manda el enlace de acceso.</p>
+          <a class="btn btn-outline" href="https://bitacobra-suite.lovable.app">Entrar en la app</a>
+        </div>
+      </div>
+
+      <div>
+        <!--
+          Formulario que NO guarda nada: no hay servidor detrás. Al pulsar «Abrir el
+          correo», el propio navegador abre tu programa de correo con los datos ya
+          escritos. Sin JavaScript sigue funcionando porque el formulario lleva
+          action="mailto:…".
+        -->
+        <div class="card">
+          <h3>Mándanos un mensaje</h3>
+          <p class="muted small">Este formulario no guarda nada en ningún sitio: abre tu programa de correo con el mensaje ya escrito, y desde ahí lo envías tú.</p>
+          <form class="contact-form" id="form-contacto" action="mailto:hola@bitacobra.es" method="post" enctype="text/plain">
+            <div>
+              <label for="nombre">Tu nombre</label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+            </div>
+            <div>
+              <label for="empresa">Tu empresa (si la tienes)</label>
+              <input type="text" id="empresa" name="empresa" autocomplete="organization">
+            </div>
+            <div>
+              <label for="correo">Tu correo</label>
+              <input type="email" id="correo" name="correo" autocomplete="email" required>
+            </div>
+            <div>
+              <label for="mensaje">Qué necesitas</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Por ejemplo: quiero probarlo, tengo 4 personas y trabajo en reformas de pisos."></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Abrir el correo</button>
+          </form>
+          <p class="muted small" style="margin-top:14px;margin-bottom:0">Si no se te abre el correo, escribe directamente a <a href="mailto:hola@bitacobra.es">hola@bitacobra.es</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="assets/icono.svg" alt="" aria-hidden="true">
+          <span class="name"><span class="bitac">Bitac</span><span class="obra">Obra</span></span>
+        </a>
+        <p class="small" style="margin-top:12px">La bitácora que protege, controla y guarda tu obra.</p>
+      </div>
+      <div>
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="index.html#que-hace">Qué hace</a></li>
+          <li><a href="precios.html">Precios</a></li>
+          <li><a href="index.html#preguntas">Preguntas</a></li>
+          <li><a href="https://bitacobra-suite.lovable.app">Entrar en la app</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto y legal</h4>
+        <ul>
+          <li><a href="contacto.html">Escribirnos</a></li>
+          <li><a href="mailto:hola@bitacobra.es">hola@bitacobra.es</a></li>
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="privacidad.html">Privacidad</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+          <li><a href="condiciones.html">Condiciones</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal-line">© 2026 BitacObra. Todos los derechos reservados. BitacObra es una marca de Engilab SL.</p>
+  </div>
+</footer>
+
+<script>
+  // Mejora del formulario: arma el correo con los datos y lo abre. No envía nada
+  // a ningún servidor y no guarda nada. Si falla, el formulario sigue funcionando
+  // por su action="mailto:".
+  (function () {
+    var form = document.getElementById("form-contacto");
+    if (!form) return;
+    var plan = new URLSearchParams(location.search).get("plan");
+    var asuntos = { autonomo: "Autónomo", empresa: "Empresa", multiempresa: "Multiempresa" };
+    form.addEventListener("submit", function (ev) {
+      var nombre = form.nombre.value.trim();
+      var empresa = form.empresa.value.trim();
+      var correo = form.correo.value.trim();
+      var mensaje = form.mensaje.value.trim();
+      var asunto = "Quiero información de BitacObra" + (plan && asuntos[plan] ? " · plan " + asuntos[plan] : "");
+      var cuerpo = "Nombre: " + nombre + "\n" + "Empresa: " + empresa + "\n" + "Correo: " + correo + "\n\n" + mensaje;
+      if (!correo) return; // deja que el navegador valide el campo
+      ev.preventDefault();
+      location.href = "mailto:hola@bitacobra.es?subject=" + encodeURIComponent(asunto) + "&body=" + encodeURIComponent(cuerpo);
+    });
+  })();
+</script>
+
+</body>
+</html>
