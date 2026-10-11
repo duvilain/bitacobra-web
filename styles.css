@@ -468,9 +468,16 @@ section.tight {
   grid-template-columns: 1fr;
   margin-top: 28px;
 }
-@media (min-width: 860px) {
+/* Los cuatro planes en una sola fila en pantalla ancha: con tres columnas el cuarto
+   (Multiempresa) se caía a una fila de abajo y parecía que no existiera (David, 11-oct). */
+@media (min-width: 620px) {
   .plans {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1120px) {
+  .plans {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 .plan {
