@@ -85,6 +85,9 @@
     .then(function (d) {
       var p = Array.isArray(d) ? d[0] : d;
       if (!p || !p.activa) return;
+      // Una promoción con fecha de fin caduca sola: pasado ese día no se aplica, aunque el
+      // propietario se haya olvidado de apagarla.
+      if (p.hasta && new Date(p.hasta + "T23:59:59") < new Date()) return;
       cartel(p);
       precios(p);
     })
