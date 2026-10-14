@@ -363,6 +363,15 @@ section.tight {
   gap: 10px;
   align-items: flex-start;
   font-size: 0.98rem;
+  /* El aviso de la promoción (`promo.js`) se añade como un <span> al final de la frase. Sin esto,
+     dentro de un <li> que es flex se colaba como una columna estrechísima al lado de la frase:
+     en el móvil se veía partido ("Los 2 primeros meses…" en una columna de dos palabras). */
+  flex-wrap: wrap;
+}
+/* El aviso, a su propia línea y alineado con la frase (20 px del tick + 10 px del hueco). */
+.ticks li .promo-line {
+  flex-basis: 100%;
+  padding-left: 30px;
 }
 .ticks .tick {
   flex: none;
