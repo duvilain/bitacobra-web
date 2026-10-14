@@ -359,26 +359,22 @@ section.tight {
   gap: 10px;
 }
 .ticks li {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  font-size: 0.98rem;
-  /* El aviso de la promoción (`promo.js`) se añade como un <span> al final de la frase. Sin esto,
-     dentro de un <li> que es flex se colaba como una columna estrechísima al lado de la frase:
-     en el móvil se veía partido ("Los 2 primeros meses…" en una columna de dos palabras). */
-  flex-wrap: wrap;
-}
-/* El aviso, a su propia línea y alineado con la frase (20 px del tick + 10 px del hueco). */
-.ticks li .promo-line {
-  flex-basis: 100%;
+  /* El tick va FUERA del flujo, no como columna de un flex. Así todo el texto de la frase fluye
+     normal y el aviso de la promoción —que `promo.js` añade como un <span> al final— cae donde
+     toca, al final de la frase. Con flex, ese <span> se colaba como una columna estrechísima al
+     lado y en el móvil se veía partido en dos palabras ("Los 2 primeros meses; después," apretado
+     en 107 px). El sangrado de 30 px (20 del tick + 10 del hueco) deja el texto como estaba. */
+  position: relative;
   padding-left: 30px;
+  font-size: 0.98rem;
 }
 .ticks .tick {
-  flex: none;
+  position: absolute;
+  left: 0;
+  top: 2px;
   width: 20px;
   height: 20px;
   color: var(--ok);
-  margin-top: 2px;
 }
 
 /* El dibujo del móvil (hecho con HTML/CSS, sin imágenes de pago). */
