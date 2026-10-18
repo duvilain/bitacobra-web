@@ -46,12 +46,50 @@
       var base = parseFloat(String(amt.textContent).replace(",", "."));
       if (!isFinite(base)) continue;
       amt.setAttribute("data-promo", "1");
-      amt.textContent = euros(base * (1 - p.porcentaje / 100));
+      var rebajado = base * (1 - p.porcentaje / 100);
+      amt.textContent = euros(rebajado);
+      /* La nota del IVA de esta tarjeta. Con la oferta viva, el precio grande es el rebajado: si la
+         nota se queda en «IVA no incluido», la tarjeta dice «13 EUR» y mas abajo «con IVA: 31,46 EUR»
+         y no hay quien lo cuadre. Asi que se dice el importe con impuestos DEL PRECIO QUE SE VE. */
+      var nota = el.parentNode.querySelector(".iva");
+      if (nota) {
+        nota.setAttribute("data-promo", "1");
+        nota.innerHTML = "IVA no incluido &middot; con IVA: <strong>" + euros(rebajado * 1.21) +
+          " &euro;/mes</strong>";
+      }
       var linea = document.createElement("p");
       linea.className = "promo-line";
       linea.innerHTML = "Antes <s>" + euros(base) + " &euro;</s> &middot; los " + p.meses +
         " primeros meses";
       el.parentNode.insertBefore(linea, el.nextSibling);
+    }
+
+    /* El bloque de abajo, el que explica los precios con IVA: hablaba de los importes de tarifa y,
+       con la oferta viva, contradecia lo que se ve arriba. Se le anyade la linea de los rebajados. */
+    var conIva = document.querySelectorAll(".note");
+    for (var k = 0; k < conIva.length; k++) {
+      var bloque = conIva[k];
+      if (bloque.getAttribute("data-promo-iva") === "1") continue;
+      if (String(bloque.textContent).trim().indexOf("Precio con IVA") !== 0) continue;
+      bloque.setAttribute("data-promo-iva", "1");
+      var trozos = [];
+      var tarjetas = document.querySelectorAll(".plan");
+      for (var m = 0; m < tarjetas.length; m++) {
+        var t2 = tarjetas[m];
+        var nombre = t2.querySelector("h3");
+        var cantidad = t2.querySelector(".price .amount");
+        if (!nombre || !cantidad) continue;
+        var b2 = parseFloat(String(cantidad.textContent).replace(",", "."));
+        if (!isFinite(b2)) continue;
+        trozos.push("<strong>" + euros(b2 * 1.21) + " &euro;</strong> (" + nombre.textContent.trim() + ")");
+      }
+      if (!trozos.length) continue;
+      var parrafo = document.createElement("p");
+      parrafo.className = "promo-line";
+      parrafo.style.marginTop = "8px";
+      parrafo.innerHTML = "Con la oferta, los " + p.meses + " primeros meses y con IVA: " +
+        trozos.join(", ") + " al mes.";
+      bloque.appendChild(parrafo);
     }
 
     /* Y en la portada, donde dice "Desde 26 al mes": el mismo numero, rebajado, y al lado los
@@ -67,7 +105,8 @@
       var aviso = document.createElement("span");
       aviso.className = "promo-line";
       aviso.innerHTML = " Los " + p.meses + " primeros meses; después, " + euros(baseD) +
-        " &euro; al mes.";
+        " &euro; al mes. Con IVA, " +
+        euros(baseD * (1 - p.porcentaje / 100) * 1.21) + " &euro;.";
       nodo.parentNode.appendChild(aviso);
     }
   }
