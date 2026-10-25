@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BitacObra · te llevamos a la web buena</title>
+  <link rel="canonical" href="https://www.bitacobra.es/">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0; url=https://www.bitacobra.es/">
+  <script>
+    // Desde el 25-oct-2026 BitacObra tiene UNA sola web: la de la app, en www.bitacobra.es.
+    // Aquí solo quedan las redirecciones de las direcciones viejas, cada una a su sitio.
+    (function () {
+      var BUENA = "https://www.bitacobra.es";
+      var mapa = {
+        "/": BUENA + "/",
+        "/index.html": BUENA + "/",
+        "/precios.html": BUENA + "/#precios",
+        "/privacidad.html": BUENA + "/privacidad",
+        "/condiciones.html": BUENA + "/condiciones",
+        "/aviso-legal.html": BUENA + "/aviso-legal",
+        "/cookies.html": BUENA + "/cookies",
+        "/contacto.html": BUENA + "/",
+        "/gracias.html": BUENA + "/"
+      };
+      var aqui = location.pathname.replace(/\/+$/, "") || "/";
+      var destino = mapa[aqui];
+      if (!destino) {
+        // Rutas de la app que lleguen por aquí: se respetan. Cualquier otra cosa: a la portada.
+        destino = aqui.indexOf(".html") === -1
+          ? BUENA + location.pathname + location.search + location.hash
+          : BUENA + "/";
+      }
+      location.replace(destino);
+    })();
+  </script>
+</head>
+<body>
+  <p>BitacObra está en <a href="https://www.bitacobra.es/">www.bitacobra.es</a>. Te llevamos allí.</p>
+</body>
+</html>
